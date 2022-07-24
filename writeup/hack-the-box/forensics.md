@@ -1,8 +1,18 @@
 # Forensics
 
-{% tabs %}
-{% tab title="Easy" %}
-### Illumination
+#### **Difficulty:**
+
+****[**Easy**](forensics.md#easy)****
+
+****[**Medium**](forensics.md#medium)****
+
+****[**Hard**](forensics.md#undefined)****
+
+## Easy <a href="#easy" id="easy"></a>
+
+<details>
+
+<summary>ILLUMINATION</summary>
 
 **Category**: Forensic
 
@@ -20,29 +30,31 @@ Download and unzip the file given.
 
 Using **`$ls -al`** will show if there is a hidden file.
 
-![](<../../.gitbook/assets/image (8).png>)
+​![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F4lw1ZFO57LLqZA6giSn1%2Fuploads%2F4NI6s3RBwKuVUxb5UaX5%2Fimage.png?alt=media\&token=3eb97ba2-6810-4280-95f0-9165838599fc)
 
 There is a hidden file called _**'.git'**._
 
 Since its a git folder we can use **`$git log`** to see recorded commit of the project.
 
-![](<../../.gitbook/assets/image (10).png>)
+<img src="../../.gitbook/assets/image (10).png" alt="" data-size="original">
 
 Now we just need to focus on the token part and use **`$git show <commit code>`** to see the changes.
 
-![](<../../.gitbook/assets/image (2).png>)
+<img src="../../.gitbook/assets/image (2).png" alt="" data-size="original">
 
 Now we already get the secret token but its in the form of base64.
 
 We can change it using **`$echo '<base64 string>' | base 64 -d`**.
 
-![](<../../.gitbook/assets/image (7).png>)
+<img src="../../.gitbook/assets/image (7).png" alt="" data-size="original">
 
 **Flag:** <mark style="background-color:blue;">HTB{v3rsi0n\_c0ntr0l\_am\_I\_right?}</mark>
 
-###
+</details>
 
-### Reminiscent
+<details>
+
+<summary>REMINISCENT</summary>
 
 **Category**: Forensic
 
@@ -62,7 +74,7 @@ Since its a memory dump situation we will be using **Volatility** tools to analy
 
 First I displayed the output of a file called **Resume.eml**.
 
-![](<../../.gitbook/assets/image (3).png>)
+<img src="../../.gitbook/assets/image (3).png" alt="" data-size="original">
 
 We can see that there is a **resume.zip** file sending to Frank and with a link _**http://10.10.99.55:8080/resume.zip**_ but seems the link cant be opened directly.
 
@@ -72,13 +84,13 @@ Now using volatility on the file called **flounder-pc-memdump.elf** and use imag
 
 **`$python vol.py -f flounder-pc-memdump.elf imageinfo`**
 
-![](<../../.gitbook/assets/image (11).png>)
+<img src="../../.gitbook/assets/image (11).png" alt="" data-size="original">
 
 Knowing that there is a resume zip file the first thing I did is use a **filescan** and filter anything that has **'resume'** on it.
 
 **`$python vol.py -f flounder-pc-memdump.elf --profile=Win7SP1x64 filescan | grep resume`**
 
-![](<../../.gitbook/assets/image (4).png>)
+<img src="../../.gitbook/assets/image (4).png" alt="" data-size="original">
 
 Now we can see there is a file called **resume.pdf** inside the file.
 
@@ -88,39 +100,40 @@ We can use **dumpfiles** function to dump the **resume.pdf**.
 
 **`$python vol.py -f flounder-pc-memdump.elf --profile=Win7SP1x64 dumpfiles -Q 0x000000001e8feb70 -D /home/db10/ctf`**
 
-![](<../../.gitbook/assets/image (6).png>)
+<img src="../../.gitbook/assets/image (6).png" alt="" data-size="original">
 
 After done dump the file now we can use **Strings** to display whats inside.
 
-![](../../.gitbook/assets/image.png)
+<img src="../../.gitbook/assets/image.png" alt="" data-size="original">
 
 We can see there is is some data in **Base64**. Now lets use **Cyberchef** to decode it.
 
-![](<../../.gitbook/assets/image (9).png>)
+<img src="../../.gitbook/assets/image (9).png" alt="" data-size="original">
 
 After decoding it the first time. it still showing a data in **Base64**. So we decode it again&#x20;
 
-![](<../../.gitbook/assets/image (5).png>)
+<img src="../../.gitbook/assets/image (5).png" alt="" data-size="original">
 
 ****
 
-**Flag:** <mark style="background-color:blue;">HTB{$</mark>_<mark style="background-color:blue;">j0G\_y0uR\_M3m0rY</mark>_<mark style="background-color:blue;">$}</mark>
-{% endtab %}
+</details>
 
-{% tab title="Medium" %}
+## Medium
 
-{% endtab %}
+<details>
 
-{% tab title="Hard" %}
-
-{% endtab %}
-{% endtabs %}
+<summary></summary>
 
 
 
+</details>
+
+## Hard
+
+<details>
+
+<summary></summary>
 
 
 
-
-
-
+</details>
