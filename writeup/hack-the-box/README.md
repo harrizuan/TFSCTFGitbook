@@ -1,5 +1,7 @@
 ---
 description: Hack The Box Challenges
+cover: https://www.hackthebox.eu/images/landingv3/OG_B2C_Homepage.jpg
+coverY: 154.51930355791066
 ---
 
 # Hack The Box
@@ -24,6 +26,6 @@ description: Hack The Box Challenges
 
 **Misc**
 
-****[**Forensics**](../../checklist/forensic.md)****
+****[**Forensics**](forensics.md)****
 
 **Web**

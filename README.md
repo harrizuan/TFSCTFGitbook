@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/tfs.png
+coverY: 0
+---
+
 # TFS
 
 ![](<.gitbook/assets/TFS (1).png>)
@@ -8,13 +13,13 @@ A list of [Capture The Flag](https://en.wikipedia.org/wiki/Capture\_the\_flag#Co
 
 ### Content
 
-#### CTF Checklist / Guide
+#### ✍️ CTF Checklist / Guide
 
 {% content-ref url="README (1).md" %}
 [README (1).md](<README (1).md>)
 {% endcontent-ref %}
 
-#### Writeup
+#### 📕 CTF Writeup
 
 {% content-ref url="writeup/hack-the-box/" %}
 [hack-the-box](writeup/hack-the-box/)
