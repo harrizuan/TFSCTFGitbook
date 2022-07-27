@@ -7,8 +7,7 @@
 ## ✍ Checklist
 
 * [Basic Linux](<README (1).md>)
-* [Forensic](checklist/forensic.md)
-* [Cryptography](checklist/cryptography.md)
+* [Basic Windows CMD](checklist/basic-windows-cmd.md)
 
 ## 📓 Writeup
 
