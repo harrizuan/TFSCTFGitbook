@@ -8,6 +8,9 @@
 
 * [Basic Linux](<README (1).md>)
 * [Basic Windows CMD](checklist/basic-windows-cmd.md)
+* [Forensic](checklist/forensic/README.md)
+  * [Wireshark](checklist/forensic/wireshark.md)
+  * [Volatility](checklist/forensic/volatility.md)
 
 ## 📓 Writeup
 

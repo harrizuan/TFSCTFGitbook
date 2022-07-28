@@ -1,6 +1,6 @@
 ---
-cover: .gitbook/assets/tfs.png
-coverY: 0
+cover: .gitbook/assets/tfs (1).png
+coverY: -40.96896290688872
 ---
 
 # TFS
@@ -17,6 +17,10 @@ A list of [Capture The Flag](https://en.wikipedia.org/wiki/Capture\_the\_flag#Co
 
 {% content-ref url="README (1).md" %}
 [README (1).md](<README (1).md>)
+{% endcontent-ref %}
+
+{% content-ref url="checklist/basic-windows-cmd.md" %}
+[basic-windows-cmd.md](checklist/basic-windows-cmd.md)
 {% endcontent-ref %}
 
 #### 📕 CTF Writeup

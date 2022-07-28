@@ -40,7 +40,7 @@ Since its a git folder we can use **`$git log`** to see recorded commit of the p
 
 Now we just need to focus on the token part and use **`$git show <commit code>`** to see the changes.
 
-<img src="../../.gitbook/assets/image (2).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (2) (1).png" alt="" data-size="original">
 
 Now we already get the secret token but its in the form of base64.
 
@@ -74,7 +74,7 @@ Since its a memory dump situation we will be using **Volatility** tools to analy
 
 First I displayed the output of a file called **Resume.eml**.
 
-<img src="../../.gitbook/assets/image (3).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (3) (1).png" alt="" data-size="original">
 
 We can see that there is a **resume.zip** file sending to Frank and with a link _**http://10.10.99.55:8080/resume.zip**_ but seems the link cant be opened directly.
 
@@ -90,7 +90,7 @@ Knowing that there is a resume zip file the first thing I did is use a **filesca
 
 **`$python vol.py -f flounder-pc-memdump.elf --profile=Win7SP1x64 filescan | grep resume`**
 
-<img src="../../.gitbook/assets/image (4).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (4) (1).png" alt="" data-size="original">
 
 Now we can see there is a file called **resume.pdf** inside the file.
 
@@ -100,11 +100,11 @@ We can use **dumpfiles** function to dump the **resume.pdf**.
 
 **`$python vol.py -f flounder-pc-memdump.elf --profile=Win7SP1x64 dumpfiles -Q 0x000000001e8feb70 -D /home/db10/ctf`**
 
-<img src="../../.gitbook/assets/image (6).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (6) (1).png" alt="" data-size="original">
 
 After done dump the file now we can use **Strings** to display whats inside.
 
-<img src="../../.gitbook/assets/image.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (15).png" alt="" data-size="original">
 
 We can see there is is some data in **Base64**. Now lets use **Cyberchef** to decode it.
 
@@ -112,7 +112,7 @@ We can see there is is some data in **Base64**. Now lets use **Cyberchef** to de
 
 After decoding it the first time. it still showing a data in **Base64**. So we decode it again&#x20;
 
-<img src="../../.gitbook/assets/image (5).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image (5) (1).png" alt="" data-size="original">
 
 ****
 
