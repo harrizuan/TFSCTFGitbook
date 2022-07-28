@@ -9,6 +9,14 @@ description: >-
 
 ### File Formats
 
+### PDF file analysis <a href="#pdf-file-analysis" id="pdf-file-analysis"></a>
+
+Hidden Data and Metadata in Adobe PDF Files ([PDF file format tricks](https://github.com/corkami/docs/blob/master/PDF/PDF.md))
+
+[qpdf](https://github.com/qpdf/qpdf) - tool that can be useful for exploring a PDF and transforming or extracting information&#x20;
+
+
+
 ### Exif Tools
 
 ### Wireshark
