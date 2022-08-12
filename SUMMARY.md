@@ -11,6 +11,7 @@
 * [Forensic](checklist/forensic/README.md)
   * [Wireshark](checklist/forensic/wireshark.md)
   * [Volatility](checklist/forensic/volatility.md)
+* [Steganography](checklist/steganography.md)
 
 ## 📓 Writeup
 
