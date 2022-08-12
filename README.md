@@ -25,6 +25,10 @@ A list of [Capture The Flag](https://en.wikipedia.org/wiki/Capture\_the\_flag#Co
 
 #### 📕 CTF Writeup
 
+{% content-ref url="writeup/t3n4ci0us-ctf-2022.md" %}
+[t3n4ci0us-ctf-2022.md](writeup/t3n4ci0us-ctf-2022.md)
+{% endcontent-ref %}
+
 {% content-ref url="writeup/hack-the-box/" %}
 [hack-the-box](writeup/hack-the-box/)
 {% endcontent-ref %}
